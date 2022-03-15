@@ -8,3 +8,6 @@ install: .install
 
 coverage: install
 	npm run coverage
+
+coveralls: install
+	npm run coveralls
