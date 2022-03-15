@@ -1,0 +1,26 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+version: 2
+jobs:
+  run_tests:
+    docker:
+      - image: cimg/node:14.19.0-browsers
+
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            make install
+      - run:
+          name: Run test
+          command: |
+            make coverage
+
+
+workflows:
+  deploy_and_notify:
+    jobs:
+      - run_tests
