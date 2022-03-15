@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter dummy test 1`] = `
+<div>
+  Counter
+</div>
+`;
