@@ -19,7 +19,10 @@
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "jest": {
-    "transformIgnorePatterns": []
+    "transformIgnorePatterns": [],
+    "coveragePathIgnorePatterns": [
+      "story.js"
+    ]
   },
   "browserslist": {
     "production": [
